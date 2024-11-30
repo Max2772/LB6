@@ -106,28 +106,6 @@ TEST(maxSubString, Test3){
     EXPECT_EQ(maxSubString(test, size), 0); 
 }
 
-/*
-TEST(ReadIntegerTest, INT_InvalidInput3){
-    std::istringstream input("abc\nkdskosmgomsongonsdgn\n");
-    std::cin.rdbuf(input.rdbuf()); 
-    EXPECT_EQ(readIntegerInLine(), 0);
-    std::cin.rdbuf(cinBuf);
-}
-
-TEST(ReadDoubleTest, DOUBLE_ValidInput){
-    std::istringstream input("2.718281828459045\n"); 
-    std::cin.rdbuf(input.rdbuf());
-    EXPECT_NEAR(readDoubleInLine(), 2.71828, 0.00001); 
-    std::cin.rdbuf(cinBuf);
-}
-
-TEST(ReadDoubleTest, DOUBLE_InvalidInput){  
-    std::istringstream input("dsonndsfondfjiiufbodfioidfwoeijl4s654g\n");
-    std::cin.rdbuf(input.rdbuf()); 
-    EXPECT_EQ(readDoubleInLine(), 0);
-    std::cin.rdbuf(cinBuf);
-}
-*/
 int main(int argc, char **argv){
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

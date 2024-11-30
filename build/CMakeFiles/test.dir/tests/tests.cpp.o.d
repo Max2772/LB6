@@ -116,6 +116,8 @@ CMakeFiles/test.dir/tests/tests.cpp.o: \
  /usr/include/c++/13/bits/shared_ptr_atomic.h \
  /usr/include/c++/13/bits/atomic_base.h \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/sanitizer/tsan_interface.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/sanitizer/common_interface_defs.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/ostream \

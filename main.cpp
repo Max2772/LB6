@@ -13,10 +13,14 @@ int main(){
         char* type = new char[80];
         while(readCharToStringForType(type) == -INF);
         int type_int = charToInteger(type);
-        if(type_int == 2)
+        if(type_int == 2){
+            delete [] type;
             break;
-        else if(type_int != 1 && type_int != 2)
+        }
+        else if(type_int != 1 && type_int != 2){
+            delete [] type;
             continue;
+        }
         
         cout << "Введите последовательность из 0 либо 1: ";
 
@@ -27,10 +31,10 @@ int main(){
         printString(input, size);
         cout << "Самая длинная подгруппа элементов состоит из " << max_string << " чисел\n";
         
-        delete [] input;
-        input = NULL;
         delete [] type;
         type = NULL;
+        delete [] input;
+        input = NULL;
     }
     return 0;
 }

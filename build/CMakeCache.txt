@@ -298,6 +298,12 @@ MyProject_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 MyProject_SOURCE_DIR:STATIC=/home/user/Documents/453502/ОАиП/LR6/Task_1
 
+//Enable AddressSanitizer
+USE_ADDRESS_SANITIZER:BOOL=OFF
+
+//Enable ThreadSanitizer
+USE_THREAD_SANITIZER:BOOL=ON
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/user/Documents/453502/ОАиП/LR6/Task_1/build/googletest/googlemock
 

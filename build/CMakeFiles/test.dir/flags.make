@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -isystem /home/user/Documents/453502/ОАиП/LR6/Task_1/googletest/googletest/include -isystem /home/user/Documents/453502/ОАиП/LR6/Task_1/googletest/googletest
 
-CXX_FLAGS = 
+CXX_FLAGS =  -fsanitize=thread
 

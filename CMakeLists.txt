@@ -5,6 +5,22 @@ set(SOURCE_FILES main.cpp tests.cpp)
 
 add_subdirectory(googletest)
 
+option(USE_ADDRESS_SANITIZER "Enable AddressSanitizer" OFF)
+option(USE_THREAD_SANITIZER "Enable ThreadSanitizer" OFF)
+
+if(USE_ADDRESS_SANITIZER AND USE_THREAD_SANITIZER)
+    message(FATAL_ERROR "AddressSanitizer and ThreadSanitizer cannot be used together.")
+elseif(USE_ADDRESS_SANITIZER)
+    set(SANITIZER_FLAGS "-fsanitize=address")
+elseif(USE_THREAD_SANITIZER)
+    set(SANITIZER_FLAGS "-fsanitize=thread")
+else()
+    set(SANITIZER_FLAGS "")
+endif()
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${SANITIZER_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${SANITIZER_FLAGS}")
+
 add_executable(app main.cpp)
 add_executable(test tests/tests.cpp)
 target_link_libraries(test gtest gtest_main)

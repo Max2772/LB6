@@ -57,19 +57,10 @@ int main(){
         cout << "Слов мужского рода: " << male << '\n';
         cout << "Слов женского рода: " << woman << '\n';
         cout << "Слов среднего рода: " << neutral << '\n';
-        
-        for(int i = 0; i < amount_size; ++i)
-            delete [] input[i];
-        
-        delete [] input;
-        input = NULL;
 
-        delete [] amount;
-        amount = NULL;
-        delete [] type;
-        type = NULL;
-        delete [] input;
-        input = NULL;
+        delete2DMatrix(input, amount_int);
+        delete1DMatrix(type);
+        delete1DMatrix(amount);
     }
     return 0;
 }

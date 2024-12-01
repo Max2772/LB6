@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int pow(int a, int b){
+int pow(int a, int b){ //
     if(b == 0)
         return 1;
 
@@ -12,11 +12,11 @@ int pow(int a, int b){
     return res;
 }
 
-int charToInteger(char* type){
+int charToInteger(char* type){ // 
     return *type - '0';
 }
 
-int stringToInteger(char* amount, int size){
+int stringToInteger(char* amount, int size){ //
     int res = 0;
     for(int i = 0; i < size; ++i){
         res += (amount[i] - '0') * pow(10, size - i - 1);
@@ -24,7 +24,7 @@ int stringToInteger(char* amount, int size){
     return res;
 }
 
-int readCharToStringForType(char* input){
+int readCharToStringForType(char* input){ // 
     bool invalidInput = false;
     bool tooLongInput = true;
     for(int i = 0; i < 80; ++i){
@@ -82,13 +82,13 @@ int readCharToStringForAmount(char* input){
     return 1;
 }
 
-int stringSize(char* input){
+int stringSize(char* input){ //
     int i = 0;
     while(input[i] != '\n') ++i;
     return i;
 }
 
-bool isCyrillic(unsigned char firstByte, unsigned char secondByte) {
+bool isCyrillic(unsigned char firstByte, unsigned char secondByte){
     return 
         ((firstByte == 0xD0 && secondByte >= 0x90 && secondByte <= 0xBF) || 
         (firstByte == 0xD1 && secondByte >= 0x80 && secondByte <= 0x8F)) || 
@@ -128,7 +128,6 @@ int readCharToStringForInput(char* input){
         }
     }
 
-
     if(tooLongInput){
         cout << "Ввод слишком длинный, введите текст до 80 символов: ";
         while((getchar()) != '\n');
@@ -155,4 +154,17 @@ int defineGender(char* input, int size){
         return 2;
     }else
         return 0; 
+}
+
+void delete2DMatrix(char** mtrx, int size){
+    for(int i = 0; i < size; ++i)
+        delete [] mtrx[i];
+        
+        delete [] mtrx;
+        mtrx = NULL;
+}
+
+void delete1DMatrix(char* mtrx){
+        delete [] mtrx;
+        mtrx = NULL;
 }

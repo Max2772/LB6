@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int pow(int a, int b){ //
+int pow(int a, int b){ 
     if(b == 0)
         return 1;
 
@@ -12,11 +12,11 @@ int pow(int a, int b){ //
     return res;
 }
 
-int charToInteger(char* type){ // 
+int charToInteger(char* type){  
     return *type - '0';
 }
 
-int stringToInteger(char* amount, int size){ //
+int stringToInteger(char* amount, int size){ 
     int res = 0;
     for(int i = 0; i < size; ++i){
         res += (amount[i] - '0') * pow(10, size - i - 1);
@@ -24,7 +24,7 @@ int stringToInteger(char* amount, int size){ //
     return res;
 }
 
-int readCharToStringForType(char* input){ // 
+int readCharToStringForType(char* input){  
     bool invalidInput = false;
     bool tooLongInput = true;
     for(int i = 0; i < 80; ++i){
@@ -53,7 +53,7 @@ int readCharToStringForType(char* input){ //
     return 1;
 }
 
-int readCharToStringForAmount(char* input){
+int readCharToStringForAmount(char* input){ 
     bool invalidInput = false;
     bool tooLongInput = true;
     for(int i = 0; i < 80; ++i){
@@ -82,13 +82,13 @@ int readCharToStringForAmount(char* input){
     return 1;
 }
 
-int stringSize(char* input){ //
+int stringSize(char* input){ 
     int i = 0;
     while(input[i] != '\n') ++i;
     return i;
 }
 
-bool isCyrillic(unsigned char firstByte, unsigned char secondByte){
+bool isCyrillic(unsigned char firstByte, unsigned char secondByte){ 
     return 
         ((firstByte == 0xD0 && secondByte >= 0x90 && secondByte <= 0xBF) || 
         (firstByte == 0xD1 && secondByte >= 0x80 && secondByte <= 0x8F)) || 
@@ -144,7 +144,7 @@ int readCharToStringForInput(char* input){
 }
 
 
-int defineGender(char* input, int size){
+int defineGender(char* input, int size){ 
     unsigned char secondLastChar = input[size-2];
     unsigned char lastChar = input[size-1];
     unsigned int utf8Char = (secondLastChar << 8) | lastChar;

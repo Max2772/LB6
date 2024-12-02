@@ -1,0 +1,6 @@
+/home/user/Documents/453502/ОАиП/LR6/Task_ALL/build/CMakeFiles/app.dir
+/home/user/Documents/453502/ОАиП/LR6/Task_ALL/build/CMakeFiles/tests1.dir
+/home/user/Documents/453502/ОАиП/LR6/Task_ALL/build/CMakeFiles/tests2.dir
+/home/user/Documents/453502/ОАиП/LR6/Task_ALL/build/CMakeFiles/tests3.dir
+/home/user/Documents/453502/ОАиП/LR6/Task_ALL/build/CMakeFiles/edit_cache.dir
+/home/user/Documents/453502/ОАиП/LR6/Task_ALL/build/CMakeFiles/rebuild_cache.dir

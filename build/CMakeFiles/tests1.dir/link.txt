@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -fsanitize=address  -fsanitize=address CMakeFiles/tests1.dir/Task_1/tests/tests.cpp.o CMakeFiles/tests1.dir/Task_1/src/funcs.cpp.o CMakeFiles/tests1.dir/general/src/funcs.cpp.o -o tests1  -lpthread /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 
